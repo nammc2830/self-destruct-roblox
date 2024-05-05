@@ -21,24 +21,8 @@ local Tabs = {
 local Options = Fluent.Options
 
 --Player
-
 local delay
 
-
-
-b:Toggle("Auto Rebirth",function(bool)
-    getgenv().AutoRebirth = bool
-    
-    task.spawn(function()
-        while task.wait() do
-            if AutoRebirth then
-                game:GetService("ReplicatedStorage").Packages.Knit.Services.RebirthService.RF.Rebirth:InvokeServer()
-                task.wait(5)
-            end
-        end
-    end)
-end)
-do
     local Slider = Tabs.Settings:AddSlider("Slider", {
         Title = "Speed",
         Description = "siuuu",
