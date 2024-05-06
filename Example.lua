@@ -27,13 +27,12 @@ local delay
         Title = "Speed",
         Description = "siuuu",
         Default = 0.65,
-        Min = 0.01,
+        Min = 0.001,
         Max = 1,
         Rounding = 1,
         Callback = function(Value)
-            delay = value
+            print("Slider was changed:", Value)
         end
-    end
     })
      Slider:SetValue(1)
 
@@ -64,7 +63,6 @@ end
     local ckick =Tabs.Settings:AddToggle("click", {Title = "autoclick", Default = false })
     ckick:OnChanged(function()
         getgenv().AutoClick = bool
-    
         task.spawn(function()
             while task.wait() do
                 if AutoClick then
@@ -75,22 +73,19 @@ end
             end
         end)
     end)
-end
     local ckk =Tabs.Settings:AddToggle("Autorebirth", {Title = "autorebirth", Default = false })
     ckick:OnChanged(function()
-        b:Toggle("Auto Rebirth",function(bool)
-            getgenv().AutoRebirth = bool
+    getgenv().AutoRebirth = bool
             
-            task.spawn(function()
-                while task.wait() do
-                    if AutoRebirth then
-                        game:GetService("ReplicatedStorage").Packages.Knit.Services.RebirthService.RF.Rebirth:InvokeServer()
-                        task.wait(5)
-                    end
-                end
-            end)
-        end))
-end
+    task.spawn(function()
+            while task.wait() do
+            if AutoRebirth then
+                    game:GetService("ReplicatedStorage").Packages.Knit.Services.RebirthService.RF.Rebirth:InvokeServer()
+                    task.wait(5)
+                end)
+        end)
+end)
+
 -- Addons:
 -- SaveManager (Allows you to have a configuration system)
 -- InterfaceManager (Allows you to have a interface managment system)
