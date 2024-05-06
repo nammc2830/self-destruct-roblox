@@ -31,7 +31,6 @@ local delay
         Max = 1,
         Rounding = 1,
         Callback = function(Value)
-            function(value)
             delay = value
         end
     end
