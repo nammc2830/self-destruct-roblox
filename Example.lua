@@ -59,7 +59,7 @@ local delay
             end
         end)
     end)
-    
+end    
     Options.MyToggle:SetValue(false)
     local ckick =Tabs.Settings:AddToggle("click", {Title = "autoclick", Default = false })
     ckick:OnChanged(function()
@@ -75,6 +75,7 @@ local delay
             end
         end)
     end)
+end
     local ckk =Tabs.Settings:AddToggle("Autorebirth", {Title = "autorebirth", Default = false })
     ckick:OnChanged(function()
         b:Toggle("Auto Rebirth",function(bool)
