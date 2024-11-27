@@ -84,7 +84,7 @@ local plr = game.Players.LocalPlayer
 local CommF = game.ReplicatedStorage.Remotes["CommF_"]
 local Settings = {}
 local HttpService = game:GetService("HttpService")
-local FolderName = "Banana Hub"
+local FolderName = "Bacon Hub"
 local SaveFileNameGame = "-BloxFruit.json"
 local SaveFileName = game.Players.LocalPlayer.Name..SaveFileNameGame
 local SettingHopServer = {}
@@ -795,7 +795,7 @@ function DetectPartMobBring(name,a,b,c)
             end
         end
         if #mob2 < #Mob then 
-            print("condimemay")
+            print("conditconditmemayok")
             return true 
         end
     end
@@ -1059,7 +1059,7 @@ local TabMastery =  Tab:AddToggle({
 	Callback = function(Value)
         if not OrionLib.Flags["Auto Farm"].Value and Value then 
             OrionLib:MakeNotification({
-                Name = "Banana Hub",
+                Name = "Bacon Hub",
                 Content = "Turn On Auto Farm, Please",
                 Image = "rbxassetid://4483345998",
                 Time = 5
